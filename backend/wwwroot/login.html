@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Zen Fitness</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="login-page">
+
+    <div class="login-container">
+        <h2 class="login-title">Login</h2>
+
+        <form action="/login" method="POST" class="login-form">
+            <input class="login-input" name="username" type="text" placeholder="Username" required>
+            <input class="login-input" name="password" type="password" placeholder="Password" required>
+            <button type="submit" class="login-submit-btn">Login</button>
+        </form>
+
+        <p id="error-message" class="login-error"></p>
+
+        <p class="register-text">
+            New here? <span class="register-link">Register now</span>
+        </p>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("error") === "1") {
+            document.getElementById("error-message").innerText = "Username or password incorrect.";
+        }
+    </script>
+
+</body>
+</html>
