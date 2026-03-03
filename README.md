@@ -1,55 +1,64 @@
-## CENG 301 Project - Gym Management System
+# Gym Management System – CENG 301
 
-## Overview
-This project is a Gym Management System developed for the CENG 301 Database Systems course.
-It uses C# (.NET Minimal API) as the backend and HTML/CSS as the user interface.
-All logic and routes are located in a single Program.cs file for simplicity and due to project scope.
+A web-based Gym Management System developed using ASP.NET Core and SQL Server as part of the CENG 301 – Database Systems course.
 
-## How to Run
+##  Project Overview
 
-Open a terminal and navigate to the backend folder:
-    cd backend
-    dotnet run
+This system is designed to manage:
 
-Open the browser and go to:
-    http://localhost:5161
+- Members and membership plans
+- Trainers and group classes
+- Equipment and maintenance tracking
+- Admin login and reporting
+- Analytical queries using stored procedures
 
-login username: admin
-login password: admin123
+The project includes ER modeling, relational mapping, SQL implementation, and a web-based backend.
 
-## Technologies Used
-Backend	C# (.NET Minimal API)
-Database	Microsoft SQL Server
-UI	HTML + CSS
-Data Access	ADO.NET (SqlConnection / SqlCommand)
-Architecture	Single-file backend (not MVC)
+---
 
-## Note 
+##  My Contributions
 
-The project is not implemented with MVC. It follows a Minimal API structure with all endpoints in one file for easier execution and project scope suitability.
+Although this was a 4-person team project, I took major technical responsibility in the following areas:
 
-## Main Features
+###  Trainer & Class Management Module
+- Designed the ER sub-model for trainers and classes
+- Defined relationships between members, trainers, and class registrations
+- Implemented SQL tables and constraints for this module
 
--Admin Login System
--Class and Trainer Management
--Member Management
--Membership and Packages
--Equipment and Maintenance Tracking
--Class Registrations
--Payments (with filtering by member)
--Reports (Stored Procedures)
-    -Most Active Member
-    -Top Equipment Usage
-    -Least Active Member
--Database Delivery Includes
-    -ER Diagram
-    -Relational Schema
-    -Primary and Foreign Keys
-    -Stored Procedures
-    -Sample Data
+###  Final ER Integration
+- Merged all team sub-modules into a unified ER diagram
+- Identified and fixed relationship inconsistencies
 
-## Developers
-Ece Bayyar
-Burçe Nur Kavak
-Selin Gül Bayrı
-İbrahim Said Akıncı
+###  Full Relational Mapping
+- Converted the ER model into a complete relational schema
+- Defined primary keys, foreign keys, and constraints
+- Ensured referential integrity across modules
+
+###  Documentation
+- Prepared the complete technical report
+- Documented ER design decisions and relational mapping process
+
+---
+
+##  Technologies Used
+
+- C# (ASP.NET Core)
+- SQL Server
+- Stored Procedures
+- ER Modeling
+- Relational Mapping
+
+---
+
+##  How to Run
+
+1. Open `GymManagementSystem.sln` in Visual Studio (Windows environment required).
+2. Execute SQL scripts located in `/sql`.
+3. Update the connection string in `appsettings.json` if necessary.
+4. Run the application.
+
+---
+
+##  Academic Context
+
+This project was developed for a Database Systems course and focuses heavily on database design principles, normalization, and relationship modeling.
